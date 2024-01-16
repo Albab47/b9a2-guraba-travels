@@ -30,7 +30,7 @@ button {
 
 /* UTILITY CLASSES */
 .container {
-    width: 90%;
+    width: 88%;
     max-width: 73.125rem;
     margin: 0 auto;
 }
@@ -227,6 +227,7 @@ button {
 .destination__img:nth-child(1) {
     grid-column: 1/span 6;
 }
+
 .destination__img:nth-child(2) {
     grid-column: 7/span 6;
 }
@@ -235,6 +236,7 @@ button {
     grid-column: 1/span 4;
     /* grid-row: 2/span 1; */
 }
+
 .destination__img:nth-child(4) {
     grid-column: 5/span 5;
 }
@@ -246,6 +248,7 @@ button {
 .destination__img:nth-child(6) {
     grid-column: 1/span 5;
 }
+
 .destination__img:nth-child(7) {
     grid-column: 6/span 7;
 }
@@ -256,6 +259,15 @@ button {
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 600px) {
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+        padding: 0 1rem;
+    }
 
     /* header */
     .header__logo {
@@ -292,15 +304,12 @@ button {
         font-size: 2rem;
     }
 
-    .description {
-        font-size: 0.875rem;
-        line-height: 1.3125rem;
-        padding: 0 1rem;
-    }
+    /* POPULAR  */
     .popular .container {
         grid-template-columns: 1fr;
-        
+
     }
+
     .popular__content {
         order: 2;
     }
@@ -311,39 +320,44 @@ button {
         /* grid-template-rows: repeat(2, 1fr); */
         gap: 1.5rem;
     }
-    
+
     .destination__content {
         max-width: 30rem;
         margin: 0 auto 2.5rem;
     }
+
     .destination__img img {
         object-fit: cover;
         width: 100%;
         height: 15rem;
         border-radius: 1rem;
     }
+
     .destination__img:nth-child(1) {
         grid-column: 1/span 1;
     }
+
     .destination__img:nth-child(2) {
         grid-column: 1/span 1;
     }
-    
+
     .destination__img:nth-child(3) {
         grid-column: 1/span 1;
         /* grid-row: 2/span 1; */
     }
+
     .destination__img:nth-child(4) {
         grid-column: 1/span 1;
     }
-    
+
     .destination__img:nth-child(5) {
         grid-column: 1/span 1;
     }
-    
+
     .destination__img:nth-child(6) {
         grid-column: 1/span 1;
     }
+
     .destination__img:nth-child(7) {
         grid-column: 1/span 1;
     }
@@ -368,6 +382,7 @@ button {
     .popular .container {
         grid-template-columns: 1fr;
     }
+
     .popular__content {
         order: 2;
     }
