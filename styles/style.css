@@ -46,6 +46,33 @@ button {
     border: 1px solid red;
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3rem;
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+.title {
+    color: #131318;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.description {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
 /* GENERAL STYLES */
 body {
     font-family: 'Mulish', sans-serif;
@@ -71,13 +98,8 @@ h6 {
     margin-bottom: 1.5rem;
 }
 
-.highlight {
-    color: var(--primary-color);
-}
-
-.description {
-    font-size: 1rem;
-    font-weight: 400;
+p {
+    margin: 1.2rem 0;
 }
 
 /* HEADER */
@@ -163,14 +185,34 @@ button {
     font-size: 1rem;
 }
 
-.hero__form button {
-    background-color: var(--primary-color);
-    color: #fff;
-}
-
 .hero__form select:focus {
     outline: none;
 }
+
+/* POPULAR */
+.popular {
+    margin: 6rem 0;
+}
+
+.popular .container {
+    grid-template-columns: 1fr 33.75rem;
+}
+
+.popular__content ul {
+    list-style-type: disc;
+}
+
+.popular__content button {
+    width: 9rem;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+}
+
+.popular__content li {
+    margin: 1rem 0;
+}
+
+
 
 @media screen and (max-width: 600px) {
 
@@ -205,12 +247,20 @@ button {
     }
 
     .hero__title {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .description {
         font-size: 0.875rem;
         line-height: 1.3125rem;
+        padding: 0 1rem;
+    }
+    .popular .container {
+        grid-template-columns: 1fr;
+        
+    }
+    .popular__content {
+        order: 2;
     }
 }
 
@@ -228,5 +278,12 @@ button {
     .hero__form select,
     button {
         width: 100%;
+    }
+
+    .popular .container {
+        grid-template-columns: 1fr;
+    }
+    .popular__content {
+        order: 2;
     }
 }
