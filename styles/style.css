@@ -63,14 +63,33 @@ a {
     color: #000;
 }
 
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 1.5rem;
+}
+
 .highlight {
     color: var(--primary-color);
 }
 
+.description {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
 /* HEADER */
+.header {
+    padding: 2rem 0;
+}
+
 .header__logo {
     display: flex;
+    align-items: center;
     gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 .header__logo h1 {
@@ -97,8 +116,61 @@ a {
     font-size: 1.8rem;
 } */
 
+/* Hero */
+.hero .container {
+    background: linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%), url("../images/banner.png") no-repeat;
+    background-size: cover;
+    min-height: 31.25rem;
+    border-radius: .7rem;
+    padding: 6.5rem 0;
+}
 
+.hero__content {
+    max-width: 42.25rem;
+    margin: 0 auto;
+}
 
+.hero__title {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #fff;
+}
+
+.hero__content .description {
+    color: #fff;
+    margin: 1.5rem 0;
+}
+
+.hero__form {
+    background: rgba(255, 255, 255, 0.30);
+    border-radius: 0.5rem;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.3rem;
+}
+
+.hero__form select,
+button {
+    background-color: #fff;
+    color: var(--text-color);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+    width: 22%;
+    font-size: 1rem;
+}
+
+.hero__form button {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.hero__form select:focus {
+    outline: none;
+}
 
 @media screen and (max-width: 600px) {
 
@@ -106,6 +178,7 @@ a {
     .header__logo {
         gap: .5rem;
     }
+
     .header__logo h1 {
         font-size: 1.34rem;
         text-align: start;
@@ -120,15 +193,40 @@ a {
         display: none;
     }
 
-    .header__nav .menu-icon {
-        left: 1rem;
+    .hero__form {
+        flex-direction: column;
+        width: 85%;
+        min-height: 3.25rem;
     }
 
+    .hero__form select,
+    button {
+        width: 100%;
+    }
+
+    .hero__title {
+        font-size: 2.5rem;
+    }
+
+    .description {
+        font-size: 0.875rem;
+        line-height: 1.3125rem;
+    }
 }
 
 @media screen and (min-width: 600px) and (max-width: 992px) {
     .header .container {
         flex-direction: column;
         align-items: center;
+    }
+
+    .hero__form {
+        flex-direction: column;
+        width: 85%;
+    }
+
+    .hero__form select,
+    button {
+        width: 100%;
     }
 }
