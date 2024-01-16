@@ -116,6 +116,10 @@ p {
     margin: 1.2rem 0;
 }
 
+i {
+    margin-right: .3rem;
+}
+
 /* HEADER */
 .header {
     padding: 2rem 0;
@@ -235,7 +239,7 @@ button {
 .destination__img {
     position: relative;
     text-align: center;
-    color: rgba(255, 255, 255, 0.903);
+    color: #fff;
 }
 
 .destination__name {
@@ -305,10 +309,88 @@ button {
     grid-column: 2/span 2;
 }
 
+/* Deals */
+.deals {
+    margin-bottom: 6rem;
+}
+
+.deal-1,
+.deal-3 {
+    min-height: 31.25rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 1rem;
+    background: url('../images/deals-1.png');
+    border-radius: .5rem;
+}
+
+.deal-2 {
+    min-height: 31.25rem;
+    display: flex;
+    align-items: center;
+    padding-left: 2.5rem;
+    margin-bottom: 1rem;
+    background-image: url('../images/deals-2.png');
+}
+
+.deals__card {
+    border-radius: 1rem;
+    border: 2px solid #FFF;
+    background: rgba(255, 255, 255, 0.80);
+    backdrop-filter: blur(2.5px);
+    padding: 3.5rem;
+    width: 36.18rem;
+    margin-right: 2.5rem;
+}
+
+.deals__card .info {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: .7rem;
+}
+
+.deals__card .price {
+    color: #FF5400;
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.deals__card .btn {
+    width: 9.375rem;
+    padding: .5rem .7rem;
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-top: 1rem;
+
+}
+
+/* PERFECT PLACE */
+.perfect-place {
+    margin-bottom: 5rem;
+}
+
+.perfect-place .container {
+    justify-content: center;
+
+}
+
+.perfect-place__video video {
+    border-radius: 1rem;
+    max-width: 38.125rem;
+}
+
+.perfect-place__content li {
+    list-style-type: disc;
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
 /* Review section */
 .review {
     margin-bottom: 6rem;
 }
+
 .review .container {
     justify-content: center;
     gap: 3%;
@@ -453,15 +535,13 @@ button {
         height: 2.09475rem;
     }
 
-    .header__nav ul{
+    .header__nav ul {
         display: none;
     }
 
     .header__nav .menu-icon {
         top: -30px;
     }
-
-
 
     /* HERO */
     .hero__form {
@@ -571,6 +651,23 @@ button {
 
     .review .card {
         width: 100%;
+    }
+
+    .deals__card {
+        margin: 1rem;
+    }
+
+    .perfect-place .container {
+        grid-template-columns: 1fr;
+    }
+
+    .perfect-place_content {
+
+    }
+
+    .perfect-place__video video {
+        border-radius: 1rem;
+        max-width: 31rem;
     }
 }
 
