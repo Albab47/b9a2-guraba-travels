@@ -326,6 +326,31 @@ button {
     color: #fff;
 }
 
+.newsletter__img {
+    position: relative;
+}
+
+.newsletter__img .discount-sticker {
+    position: absolute;
+    right: .3rem;
+    bottom: 2.6rem;
+    max-width: 20rem;
+    color: #FFF;
+    background-color: var(--primary-color);
+    padding: 1.5rem;
+    text-align: center;
+    line-height: 1.2;
+    border-radius: 1rem;
+    transform: rotate(-19.628deg);
+}
+
+.discount-sticker p {
+    font-size: 2rem;
+    margin: 0 0;
+    font-weight: 800;
+}
+
+
 
 
 
@@ -456,6 +481,15 @@ button {
 
     .newsletter .container {
         grid-template-columns: 1fr;
+    }
+
+    .newsletter__img .discount-sticker {
+        max-width: 15rem;
+        bottom: 1.7rem;
+    }
+
+    .discount-sticker p {
+        font-size: 1.3rem;
     }
 }
 
